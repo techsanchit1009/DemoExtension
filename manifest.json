@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Demo Extension - TTN",
+  "description": "This is a demo application for testing purposes.",
+  "version": "1.0.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "/images/logo.png",
+    "default_popup": "/views/popup.html",
+    "default_title": "Extension Icon"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["/scripts/content.js"]
+  }],
+  "options_ui": {
+    "page": "/views/options.html",
+    "open_in_tab": false
+  },
+  "permissions": ["storage"]
+}
